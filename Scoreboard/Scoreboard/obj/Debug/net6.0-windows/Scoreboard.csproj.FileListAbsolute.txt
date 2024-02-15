@@ -1,0 +1,16 @@
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\bin\Debug\net6.0-windows\Scoreboard.exe
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\bin\Debug\net6.0-windows\Scoreboard.deps.json
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\bin\Debug\net6.0-windows\Scoreboard.runtimeconfig.json
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\bin\Debug\net6.0-windows\Scoreboard.dll
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\bin\Debug\net6.0-windows\Scoreboard.pdb
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.Form1.resources
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.csproj.GenerateResource.cache
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.AssemblyInfoInputs.cache
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.AssemblyInfo.cs
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.csproj.CoreCompileInputs.cache
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.dll
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\refint\Scoreboard.dll
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.pdb
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\Scoreboard.genruntimeconfig.cache
+C:\Users\youtu\Documents\GitHub\Scoreboard\Scoreboard\Scoreboard\obj\Debug\net6.0-windows\ref\Scoreboard.dll
