@@ -3,6 +3,8 @@ namespace Scoreboard
     public partial class Form1 : Form
     {
         private AutoCompleteStringCollection autoCompleteCollection;
+        private const string apiUrl = "https://your-api-endpoint.com/graphql";
+        private const string token = "YOUR_TOKEN_HERE";
 
         public Form1()
         {
@@ -151,8 +153,8 @@ namespace Scoreboard
                 // Update the textbox with the incremented value
                 t.Text = number.ToString();
             }
-
         }
+
         private void resetScore()
         {
             textBoxS1.Text = "0";
@@ -220,15 +222,55 @@ namespace Scoreboard
         }
         private string[] LoadNamesFromSomeSource(string t)
         {
-            
-            if (File.Exists(t)) { 
-                return File.ReadAllLines(t);
+            if (File.Exists(t)) return File.ReadAllLines(t);
+            else throw new Exception("No File Found");
+        }
+        
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            // Get the folder path from textBoxPath
+            string folderPath = textBoxPath.Text;
+
+            // Check if the folder path is empty
+            if (string.IsNullOrWhiteSpace(folderPath)){
+                MessageBox.Show("Please provide a valid folder path.");
+                return; // Exit the method if folder path is not valid
             }
-            else
-            {
-                throw new Exception("No File Found");
+
+            // Check if the folder path exists
+            if (!Directory.Exists(folderPath)){
+                MessageBox.Show("The folder path does not exist.");
+                return; // Exit the method if folder path doesn't exist
             }
-            
+
+            // Create the Scoreboard folder if it doesn't exist
+            string scoreboardFolderPath = Path.Combine(folderPath, "Scoreboard");
+            Directory.CreateDirectory(scoreboardFolderPath);
+
+            // Call the function for each TextBox
+            SaveTextBoxToFile(textBoxP1, "Player1.tmp");
+            SaveTextBoxToFile(textBoxP2, "Player2.tmp");
+            SaveTextBoxToFile(textBoxS1, "Score1.tmp");
+            SaveTextBoxToFile(textBoxS2, "Score2.tmp");
+            SaveTextBoxToFile(textBoxL1, "Label1.tmp");
+            SaveTextBoxToFile(textBoxM1, "Misc1.tmp");
+            SaveTextBoxToFile(textBoxL2, "Label2.tmp");
+            SaveTextBoxToFile(textBoxM2, "Misc2.tmp");
+           
+
+        }
+        private void SaveTextBoxToFile(TextBox textBox, string fileName)
+        {
+            // Get the file path
+            string filePath = Path.Combine(textBoxPath.Text, "Scoreboard", fileName);
+
+            // Check if the file exists, create it if it doesn't
+            if (!File.Exists(filePath)){
+                File.Create(filePath).Close();
+            }
+
+            // Erase the content of the file and write the TextBox's text
+            File.WriteAllText(filePath, textBox.Text);
         }
     }
 }

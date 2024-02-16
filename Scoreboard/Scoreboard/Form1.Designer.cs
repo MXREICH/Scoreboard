@@ -52,6 +52,14 @@
             buttonResetScores = new Button();
             buttonSwitchPlayers = new Button();
             openFileDialog1 = new OpenFileDialog();
+            textBoxL1 = new TextBox();
+            textBoxM1 = new TextBox();
+            textBoxL2 = new TextBox();
+            textBoxM2 = new TextBox();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -59,23 +67,28 @@
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Location = new Point(12, 269);
+            buttonUpdate.Location = new Point(12, 313);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.Size = new Size(614, 63);
             buttonUpdate.TabIndex = 1;
             buttonUpdate.Text = "Update";
             buttonUpdate.UseVisualStyleBackColor = true;
+            buttonUpdate.Click += buttonUpdate_Click;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(button2P);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(textBoxM2);
             groupBox2.Controls.Add(textBoxS2);
+            groupBox2.Controls.Add(textBoxL2);
             groupBox2.Controls.Add(button2M);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(textBoxP2);
             groupBox2.Location = new Point(356, 104);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(270, 159);
+            groupBox2.Size = new Size(270, 203);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Player 2";
@@ -125,19 +138,23 @@
             textBoxP2.Location = new Point(60, 32);
             textBoxP2.Name = "textBoxP2";
             textBoxP2.ScrollBars = ScrollBars.Vertical;
-            textBoxP2.Size = new Size(204, 23);
+            textBoxP2.Size = new Size(202, 23);
             textBoxP2.TabIndex = 1;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(button1P);
             groupBox1.Controls.Add(button1M);
+            groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(textBoxS1);
             groupBox1.Controls.Add(textBoxP1);
+            groupBox1.Controls.Add(textBoxM1);
+            groupBox1.Controls.Add(textBoxL1);
             groupBox1.Location = new Point(12, 104);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(269, 159);
+            groupBox1.Size = new Size(269, 203);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Player 1";
@@ -300,11 +317,83 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // textBox1
+            // 
+            textBoxL1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxL1.Location = new Point(56, 141);
+            textBoxL1.Name = "textBox1";
+            textBoxL1.ScrollBars = ScrollBars.Vertical;
+            textBoxL1.Size = new Size(207, 23);
+            textBoxL1.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            textBoxM1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxM1.Location = new Point(56, 170);
+            textBoxM1.Name = "textBox2";
+            textBoxM1.ScrollBars = ScrollBars.Vertical;
+            textBoxM1.Size = new Size(207, 23);
+            textBoxM1.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            textBoxL2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxL2.Location = new Point(58, 141);
+            textBoxL2.Name = "textBox3";
+            textBoxL2.ScrollBars = ScrollBars.Vertical;
+            textBoxL2.Size = new Size(204, 23);
+            textBoxL2.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            textBoxM2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxM2.Location = new Point(58, 172);
+            textBoxM2.Name = "textBox4";
+            textBoxM2.ScrollBars = ScrollBars.Vertical;
+            textBoxM2.Size = new Size(204, 23);
+            textBoxM2.TabIndex = 13;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 144);
+            label5.Name = "label5";
+            label5.Size = new Size(44, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Label 1";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(9, 173);
+            label6.Name = "label6";
+            label6.Size = new Size(41, 15);
+            label6.TabIndex = 14;
+            label6.Text = "Misc 1";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(10, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(44, 15);
+            label7.TabIndex = 15;
+            label7.Text = "Label 2";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(11, 175);
+            label8.Name = "label8";
+            label8.Size = new Size(41, 15);
+            label8.TabIndex = 16;
+            label8.Text = "Misc 2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(638, 340);
+            ClientSize = new Size(638, 382);
             Controls.Add(buttonSwitchPlayers);
             Controls.Add(buttonResetScores);
             Controls.Add(buttonResetPlayers);
@@ -348,5 +437,13 @@
         private TextBox textBoxPath;
         private Button buttonOpenFile;
         private OpenFileDialog openFileDialog1;
+        private TextBox textBoxL1;
+        private TextBox textBoxM1;
+        private TextBox textBoxL2;
+        private TextBox textBoxM2;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
     }
 }
